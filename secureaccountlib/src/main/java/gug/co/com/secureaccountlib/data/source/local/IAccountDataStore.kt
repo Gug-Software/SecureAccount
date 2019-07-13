@@ -5,15 +5,15 @@ interface IAccountDataStore {
     /**
      * create account in local storage
      */
-    fun createAccount(
+    suspend fun createAccount(
         userName: String,
         password: String
-    )
+    ): Boolean
 
     /**
      * Validate an account from local storage
      */
-    fun validateAccount(
+    suspend fun validateAccount(
         userName: String,
         password: String
     ): Boolean

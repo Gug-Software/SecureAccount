@@ -16,6 +16,6 @@ interface AccountDao {
     suspend fun getAccountByUserNameAndPassword(
         userName: String,
         password: String
-    ): DbAccount
+    ): DbAccount?
 
 }
