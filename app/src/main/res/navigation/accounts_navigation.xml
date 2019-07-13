@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/accounts_navigation"
+            app:startDestination="@id/splash">
+
+    <fragment
+            android:id="@+id/accountCreate"
+            android:name="gug.co.com.secureaccount.ui.account.AccountFragment"
+            android:label="@string/menu_bottom_create"
+            tools:layout="@layout/fragment_account">
+
+        <argument
+                android:name="isCreating"
+                app:argType="boolean"
+                android:defaultValue="true"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/splash"
+            android:name="gug.co.com.secureaccount.ui.splash.SplashFragment"
+            android:label="fragment_splash"
+            tools:layout="@layout/fragment_splash">
+
+        <action
+                android:id="@+id/action_splash_to_accountCreate"
+                app:destination="@id/accountCreate"
+                app:popUpTo="@+id/splash"
+                app:popUpToInclusive="true"
+                app:enterAnim="@anim/fade_in"
+                app:exitAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/fade_in"
+                app:popExitAnim="@anim/fade_out"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/accountValidate"
+            android:name="gug.co.com.secureaccount.ui.account.AccountFragment"
+            android:label="@string/menu_bottom_validate"
+            tools:layout="@layout/fragment_account">
+
+        <argument
+                android:name="isCreating"
+                app:argType="boolean"
+                android:defaultValue="false"/>
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/attemps"
+            android:name="gug.co.com.secureaccount.ui.attemps.AttempsFragment"
+            android:label="@string/menu_attemps"
+            tools:layout="@layout/fragment_attemps">
+        <argument
+                android:name="userName"
+                app:argType="string"/>
+    </fragment>
+
+    <action
+            android:id="@+id/action_global_attemps"
+            app:destination="@id/attemps"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+</navigation>

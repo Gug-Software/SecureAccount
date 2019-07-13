@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation project(":secureaccountlib")
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     // Kotlin

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:title="@string/menu_bottom_create"
+            android:id="@+id/accountCreate"
+            android:icon="@drawable/ic_create_black_24dp"/>
+
+    <item
+            android:title="@string/menu_bottom_validate"
+            android:id="@+id/accountValidate"
+            android:icon="@drawable/ic_check_box_black_24dp"/>
+
+</menu>

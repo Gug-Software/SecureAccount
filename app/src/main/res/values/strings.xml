@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">SecureAccount</string>
+
+    <string name="app_name">Secure Accounts</string>
+
+    <string name="button_createAccount">Crear cuenta</string>
+    <string name="button_validateAccount">Validar cuenta</string>
+
+    <string name="text_userName">Usuario (mail)</string>
+    <string name="text_password">Contraseña</string>
+
+    <string name="msg_error">Ha ocurrido un error inesperado</string>
+    <string name="msg_noEmpty">Este dato no puede estar vacio</string>
+    <string name="msg_createOK">Se ha creado la cuenta exitosamente.</string>
+    <string name="msg_createError">No pudimos crear la cuenta.</string>
+    <string name="msg_validateOK">Validación exitosa.</string>
+    <string name="msg_validateError">Validación erronea.</string>
+
+    <string name="msg_userNameInstructions">Debe ser un correo valido</string>
+    <string name="msg_passwordInstructions">De mínimo 8 caracteres donde incluya mayúsculas, minúsculas, números y caracteres especiales</string>
+
+    <string name="menu_bottom_create">Crear</string>
+    <string name="menu_bottom_validate">Validar</string>
+
+    <string name="menu_attemps">Intentos de validación</string>
+
 </resources>
