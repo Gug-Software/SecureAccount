@@ -7,6 +7,8 @@
 
     <string name="text_userName">Usuario (mail)</string>
     <string name="text_password">Contraseña</string>
+    <string name="text_success">Exitoso</string>
+    <string name="text_failure">Erroneo</string>
 
     <string name="msg_error">Ha ocurrido un error inesperado</string>
     <string name="msg_noEmpty">Este dato no puede estar vacio</string>

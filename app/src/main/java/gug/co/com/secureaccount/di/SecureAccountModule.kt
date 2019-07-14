@@ -1,8 +1,11 @@
 package gug.co.com.secureaccount.di
 
 import gug.co.com.secureaccount.contract.account.IContractAccount
+import gug.co.com.secureaccount.contract.attemps.IContractAttemps
 import gug.co.com.secureaccount.repository.account.AccountRepository
+import gug.co.com.secureaccount.repository.attemps.AttempsRepository
 import gug.co.com.secureaccount.viewmodels.account.AccountViewModel
+import gug.co.com.secureaccount.viewmodels.attemps.AttempsViewModel
 import gug.co.com.secureaccount.viewmodels.splash.SplashViewModel
 import gug.co.com.secureaccountlib.data.source.local.IAccountDataStore
 import gug.co.com.secureaccountlib.data.source.local.IAttempInformationDataStore
@@ -31,9 +34,11 @@ class SecureAccountModule {
             single<IAttempInformationDataStore> { AttempInformationDataStore(get()) }
 
             single<IContractAccount.Model> { AccountRepository(get()) }
+            single<IContractAttemps.Model> { AttempsRepository(get()) }
 
             viewModel { SplashViewModel() }
             viewModel { AccountViewModel(get()) }
+            viewModel { AttempsViewModel(get()) }
 
         }
 

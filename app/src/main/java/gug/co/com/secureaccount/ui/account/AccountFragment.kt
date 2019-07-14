@@ -92,9 +92,9 @@ class AccountFragment
 
     private fun defineObservers() {
 
-        viewModel.navToAttemps.observe(this, Observer { navigate ->
-            if (navigate) {
-                navigateToAttempsList(binding.usernameText.text.toString())
+        viewModel.navToAttemps.observe(this, Observer { username ->
+            if (username != null) {
+                navigateToAttempsList(username)
                 viewModel.onNavigateAttempsDone()
             }
         })
@@ -112,7 +112,10 @@ class AccountFragment
         })
 
         viewModel.snackbarMessage.observe(this, Observer {
-            Snackbar.make(binding.coordinator, getString(it), Snackbar.LENGTH_LONG).show()
+            if (it != 0) {
+                Snackbar.make(binding.coordinator, getString(it), Snackbar.LENGTH_LONG).show()
+            }
+            viewModel.onSnackBarDone()
         })
     }
 

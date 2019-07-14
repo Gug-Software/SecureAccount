@@ -81,6 +81,7 @@
                                 android:inputType="textPassword"
                                 android:id="@+id/password_text"
                                 android:drawableLeft="@drawable/ic_lock_open_black_24dp"
+                                android:drawableStart="@drawable/ic_lock_open_black_24dp"
                                 android:hint="@string/text_password"/>
 
                     </com.google.android.material.textfield.TextInputLayout>

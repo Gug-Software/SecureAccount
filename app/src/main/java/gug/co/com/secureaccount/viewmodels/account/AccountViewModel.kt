@@ -13,8 +13,8 @@ class AccountViewModel(
     private val repository: IContractAccount.Model
 ) : BaseViewModel(), IContractAccount.ViewModel {
 
-    private val _navToAttemps = MutableLiveData<Boolean>()
-    val navToAttemps: LiveData<Boolean> = _navToAttemps
+    private val _navToAttemps = MutableLiveData<String>()
+    val navToAttemps: LiveData<String> = _navToAttemps
 
     private val _showMsgErrors = MutableLiveData<Boolean>()
     val showMsgErrors: LiveData<Boolean> = _showMsgErrors
@@ -68,7 +68,7 @@ class AccountViewModel(
                         true -> {
                             _snackbarText.value = R.string.msg_validateOK
                             _showMsgErrors.value = false
-                            _navToAttemps.value = true
+                            _navToAttemps.value = userName
                         }
                         else -> {
                             _snackbarText.value = R.string.msg_validateError
@@ -84,6 +84,10 @@ class AccountViewModel(
     }
 
     fun onNavigateAttempsDone() {
-        _navToAttemps.value = false
+        _navToAttemps.value = null
+    }
+
+    fun onSnackBarDone() {
+        _snackbarText.value = 0
     }
 }
